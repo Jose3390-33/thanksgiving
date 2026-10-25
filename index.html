@@ -368,13 +368,13 @@ function renderSheet(){
     var h = document.createElement("h3"); h.textContent = cat; col.appendChild(h);
     var ul = document.createElement("ul");
     var items = SHEET[cat].map(function(i){ return {dish: i.dish}; });
-    extras.filter(function(e){ return e.category === catKey(cat); }).forEach(function(e){ items.push({dish: e.dish}); });
+    extras.filter(function(e){ return e.category === catKey(cat); }).forEach(function(e){ items.push({dish: e.dish, extra: true}); });
     items.forEach(function(item){
       var li = document.createElement("li");
       var dish = document.createElement("span"); dish.className = "dish"; dish.textContent = item.dish; li.appendChild(dish);
       var e = taken[norm(item.dish)];
       if (e){
-        li.className = "taken";
+        li.className = item.extra ? "extra" : "taken";
         var who = document.createElement("span"); who.className = "who"; who.textContent = e.name; tag(who, e); li.appendChild(who);
       } else {
         var b = document.createElement("button"); b.type = "button"; b.className = "claim"; b.textContent = "I'll bring it";
@@ -392,7 +392,7 @@ function renderSheet(){
     var h = document.createElement("h3"); h.textContent = "Additional dishes"; col.appendChild(h);
     var ul = document.createElement("ul");
     other.forEach(function(e){
-      var li = document.createElement("li"); li.className = "taken";
+      var li = document.createElement("li"); li.className = "extra";
       var d = document.createElement("span"); d.className = "dish"; d.textContent = e.dish;
       var w = document.createElement("span"); w.className = "who"; w.textContent = e.name; tag(w, e);
       li.append(d, w); ul.appendChild(li);
