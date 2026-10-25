@@ -103,11 +103,11 @@ textarea.line{padding:6px 2px;resize:vertical}
 .reply .actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
 .reply .small{font-size:15px;color:var(--muted)}
 
-.rsvp{padding-block:80px 40px}
+.rsvp{background:var(--band);padding-block:80px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .sheet-note{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted);font-size:16px}
 .cols li .who{white-space:nowrap}
 .cols li.taken .who .tag,.guests .tag{font-family:var(--body);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
-.coming{padding-block:80px 0}
+.coming{padding-block:80px}
 .guests{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
 .guests li{background:var(--sheet);border:1px solid var(--rule);padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0}
 .guests .gname{font-family:var(--display);font-size:22px;line-height:1.2;color:var(--ink);overflow-wrap:anywhere}
@@ -124,7 +124,7 @@ textarea.line{padding:6px 2px;resize:vertical}
 .pair{display:flex;flex-wrap:wrap;gap:18px}
 .pair .field{flex:1 1 140px}
 
-footer{position:relative;overflow:hidden;margin-top:40px;padding-block:32px 100px;border-top:1px solid var(--rule)}
+footer{position:relative;overflow:hidden;margin-top:0;padding-block:40px 100px}
 footer p{margin:0}
 .walker{position:absolute;left:0;bottom:12px;animation:walk 18s linear infinite}
 .walker svg{display:block;width:64px;height:64px;transform-origin:50% 90%;animation:waddle .5s ease-in-out infinite}
@@ -268,7 +268,8 @@ footer p{margin:0}
   <p class="regrets" id="regrets" hidden></p>
 </section>
 
-<section class="rsvp wrap" id="rsvp" aria-labelledby="rsvp-h">
+<section class="rsvp" id="rsvp" aria-labelledby="rsvp-h">
+ <div class="wrap">
   <div class="rsvp-inner">
     <p class="kicker" style="font-family:var(--body);font-style:italic;font-size:22px;margin-bottom:6px">One last thing</p>
     <h2 class="h2" id="rsvp-h">Let us know you're coming</h2>
@@ -296,6 +297,7 @@ footer p{margin:0}
       <p class="note" style="margin:0">Your name, party size and dish show on this page for everyone. Allergies go only to Karla and Jose.</p>
     </form>
   </div>
+ </div>
 </section>
 
 <footer class="wrap">
