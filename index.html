@@ -1,0 +1,519 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><meta name="description" content="There's always room at our table. RSVP for Thanksgiving at Karla &amp; Jose's and pick a dish to bring."><title>Thanksgiving at Karla &amp; Jose's</title><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Thanksgiving at Karla &amp; Jose's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a mailed paper invitation. Taped snapshot + letter-style copy, a warm band holding a ruled sign-up sheet, a reply card. Single light look on purpose. */
+:root{
+  --paper:#FAF3E7; --band:#F1E2CC; --sheet:#FFFDF8; --tape:rgba(226,212,178,.85);
+  --ink:#2E211B; --muted:#5E4A3E; --rule:#D9CDB8; --cranberry:#8E2433; --cranberry-dark:#5C1520; --pen:#1F3A6B; --margin:#D99A9A;
+  --leaf-1:#D9682B; --leaf-2:#E8A33D; --leaf-3:#9B2C3A; --leaf-4:#7C8B3A; --turkey:#7A4A2A; --turkey-2:#9A6238; --turkey-head:#8B5532; --beak:#E8A33D; --wattle:#B8323F; --legs:#C98A2A;
+  --display:'Young Serif', Georgia, 'Times New Roman', serif;
+  --body:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --hand:'Nanum Pen Script', 'Comic Sans MS', cursive;
+  color-scheme: light;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.6;overflow-x:hidden}
+a{color:var(--cranberry)}a:hover{color:var(--cranberry-dark)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--leaf-2);outline-offset:2px}
+input,select,textarea,button{font:inherit;color:var(--ink)}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:960px;margin:0 auto;padding-inline:20px}
+.hand{font-family:var(--hand);line-height:1}
+.h2{margin:0 0 10px;font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,36px);line-height:1.15}
+.lede{margin:0;color:var(--muted);max-width:62ch}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:72px 64px}
+.leaves{position:absolute;inset:0;pointer-events:none}
+.leaves svg{position:absolute;top:0;animation:fall linear infinite}
+.hero-grid{position:relative;display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.snap{position:relative;flex:0 1 300px;min-width:0;max-width:100%;animation:settle 1.1s cubic-bezier(.2,.8,.3,1) both}
+.tape{position:absolute;width:90px;height:28px;background:var(--tape);z-index:2}
+.snap figure{margin:0;background:#FFFFFF;padding:12px 12px 16px;box-shadow:0 2px 6px rgba(46,33,27,.15)}
+.photo{position:relative}
+.photo img{display:block;width:100%;height:auto}
+.hat{position:absolute;left:51%;top:-13%;width:34%;transform-origin:50% 90%;animation:hatdrop .9s cubic-bezier(.3,.9,.4,1.2) 1s both;filter:drop-shadow(0 2px 2px rgba(46,33,27,.25))}
+.snap figcaption{margin-top:8px;text-align:center;font-family:var(--hand);font-size:28px;line-height:1}
+.intro{flex:1 1 400px;min-width:0}
+.intro > *{animation:rise .7s ease-out both}
+.intro{text-align:center}
+.intro .welcome{margin-left:auto;margin-right:auto}
+.intro .jump{justify-content:center}
+.kicker{margin:0 0 8px;font-size:34px;color:var(--cranberry)}
+h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,6.5vw,68px);line-height:1.02}
+.date{margin:18px 0 0;font-size:22px}
+.welcome{margin:14px 0 0;max-width:46ch}
+.count{margin:22px 0 0;font-size:18px;color:var(--muted);font-variant-numeric:tabular-nums}
+.count b{color:var(--ink);font-weight:600}
+.count .days{font-family:var(--display);font-weight:400;font-size:30px;color:var(--cranberry)}
+.jump{margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:600}
+
+.squiggle{display:block;margin:0 auto;max-width:100%}
+
+/* plan */
+.plan{padding-block:56px 80px}
+.plan-grid{display:flex;flex-wrap:wrap;gap:48px;margin-top:24px}
+.details{flex:1 1 380px;min-width:0;margin:0;display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);column-gap:20px}
+.details dt,.details dd{padding:14px 0;border-top:1px solid var(--rule)}
+.details dt{font-weight:600}
+.details dd{margin:0}
+.details dt:last-of-type,.details dd:last-of-type{border-bottom:1px solid var(--rule)}
+.day{flex:1 1 300px;min-width:0}
+.label{margin:0 0 14px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:var(--body);font-weight:600}
+.day ol{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px dashed var(--rule);display:flex;flex-direction:column;gap:12px}
+.day time,.day .t{font-weight:600;color:var(--cranberry);font-variant-numeric:tabular-nums}
+
+/* food */
+.food{background:var(--band);padding-block:80px}
+.food-head{display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin-bottom:36px}
+.turkey{flex:0 0 auto;width:180px;height:180px;max-width:100%}
+.fan{transform-origin:100px 125px;transform-box:view-box;animation:fan 3.2s ease-in-out infinite}
+.food-copy{flex:1 1 360px;min-width:0}
+.food-copy p{margin:0 0 10px}
+.sheet{background:var(--sheet);border:1px solid #E2D6C2;border-left:3px double var(--margin);padding:28px 24px 28px 36px;box-shadow:0 1px 3px rgba(46,33,27,.08)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.cols h3{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:24px}
+.cols ul{list-style:none;margin:0;padding:0}
+.cols li{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;border-bottom:1px solid var(--rule)}
+.cols li.taken .dish{text-decoration:line-through;text-decoration-color:var(--cranberry);color:var(--muted)}
+.cols li .who{font-family:var(--body);font-style:italic;font-size:17px;line-height:1.3;color:var(--muted)}
+.claim{background:none;border:0;padding:8px 0;color:var(--cranberry);font-weight:600;font-size:16px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.claim:hover{color:var(--cranberry-dark)}
+.ps{margin:22px 0 0}
+
+/* forms */
+.form{display:flex;flex-wrap:wrap;gap:16px 18px;align-items:flex-end}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label,.legend{font-size:16px;font-weight:600}
+.line{min-height:44px;border:0;border-bottom:2px solid var(--ink);background:transparent;padding:0 2px;border-radius:0;width:100%;box-sizing:border-box}
+textarea.line{padding:6px 2px;resize:vertical}
+.btn{min-height:46px;padding:0 24px;border:0;border-radius:4px;background:var(--ink);color:var(--paper);font-weight:600;cursor:pointer}
+.btn.red{background:var(--cranberry);color:#FFFFFF}
+.btn:hover{filter:brightness(1.15)}
+.bring-form{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule)}
+.note{flex:1 1 100%;margin:0;color:var(--muted);font-size:16px}
+
+.reply{margin-top:20px;background:var(--sheet);border:1px solid var(--rule);padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.reply p{margin:0}
+.reply .msg{font-family:var(--hand);font-size:26px;line-height:1.2;color:var(--pen);white-space:pre-wrap;overflow-wrap:anywhere}
+.reply .actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.reply .small{font-size:15px;color:var(--muted)}
+
+.rsvp{padding-block:80px 40px}
+.sheet-note{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted);font-size:16px}
+.cols li .who{white-space:nowrap}
+.cols li.taken .who .tag,.guests .tag{font-family:var(--body);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
+.coming{padding-block:80px 0}
+.guests{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.guests li{background:var(--sheet);border:1px solid var(--rule);padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.guests .gname{font-family:var(--display);font-size:22px;line-height:1.2;color:var(--ink);overflow-wrap:anywhere}
+.guests .gmeta{font-size:16px;color:var(--muted)}
+.guests .gmeta b{color:var(--ink);font-weight:600}
+.regrets{margin:16px 0 0;color:var(--muted);font-size:16px}
+.preview-note{background:var(--cranberry);color:#FFFFFF;text-align:center;font-size:14px;padding:8px 16px;margin:0}
+.status{margin:0;min-height:1.4em;font-weight:600}
+.status.ok{color:#2F6B3A}.status.err{color:var(--cranberry)}
+.rsvp-inner{max-width:640px}
+.rsvp .form{flex-direction:column;align-items:stretch}
+.radios{display:flex;flex-wrap:wrap;gap:6px 24px}
+.radios label{display:flex;align-items:center;gap:8px;min-height:44px}
+.pair{display:flex;flex-wrap:wrap;gap:18px}
+.pair .field{flex:1 1 140px}
+
+footer{position:relative;overflow:hidden;margin-top:40px;padding-block:32px 100px;border-top:1px solid var(--rule)}
+footer p{margin:0}
+.walker{position:absolute;left:0;bottom:12px;animation:walk 18s linear infinite}
+.walker svg{display:block;width:64px;height:64px;transform-origin:50% 90%;animation:waddle .5s ease-in-out infinite}
+
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes settle{0%{opacity:0;transform:rotate(-12deg) translateY(30px)}70%{opacity:1;transform:rotate(-1deg)}100%{opacity:1;transform:rotate(-2.5deg)}}
+@keyframes hatdrop{0%{opacity:0;transform:translateY(-60px) rotate(-14deg)}60%{opacity:1;transform:translateY(6px) rotate(9deg)}80%{transform:translateY(-3px) rotate(4deg)}100%{opacity:1;transform:translateY(0) rotate(6deg)}}
+@keyframes fall{0%{transform:translate(0,-60px) rotate(0)}50%{transform:translate(40px,320px) rotate(180deg)}100%{transform:translate(-20px,760px) rotate(360deg)}}
+@keyframes fan{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(3deg) scale(1.04)}}
+@keyframes walk{from{transform:translateX(-90px)}to{transform:translateX(min(100vw,1000px))}}
+@keyframes waddle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) translateY(-3px)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important}.snap{transform:rotate(-2.5deg)}.hat{transform:rotate(6deg)}}
+@media (max-width:520px){.hero{padding-block:48px 48px}.hero-grid{gap:40px}.snap{margin-inline:auto;flex-basis:220px}.details{grid-template-columns:minmax(0,90px) minmax(0,1fr)}}
+</style>
+
+<p class="preview-note" id="preview-note" hidden>Preview mode: sample RSVPs shown, nothing is saved yet.</p>
+<header class="hero">
+  <div class="leaves" aria-hidden="true">
+    <svg width="30" height="30" viewBox="-15 -15 30 30" style="left:6%;opacity:.55;animation-duration:13s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-1)"/></svg>
+    <svg width="24" height="24" viewBox="-15 -15 30 30" style="left:22%;opacity:.45;animation-duration:17s;animation-delay:4s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-2)"/></svg>
+    <svg width="28" height="28" viewBox="-15 -15 30 30" style="left:47%;opacity:.4;animation-duration:15s;animation-delay:8s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-3)"/></svg>
+    <svg width="22" height="22" viewBox="-15 -15 30 30" style="left:66%;opacity:.5;animation-duration:12s;animation-delay:2s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-4)"/></svg>
+    <svg width="32" height="32" viewBox="-15 -15 30 30" style="left:82%;opacity:.45;animation-duration:16s;animation-delay:6s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-1)"/></svg>
+    <svg width="20" height="20" viewBox="-15 -15 30 30" style="left:93%;opacity:.5;animation-duration:14s;animation-delay:10s"><path d="M0-13C8-8 8 5 0 13C-8 5-8-8 0-13Z" fill="var(--leaf-2)"/></svg>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="intro">
+      <svg class="turkey" viewBox="-34 0 268 200" role="img" aria-label="Cartoon turkey" style="display:block;width:150px;height:112px;margin:0 auto 10px;animation:rise .7s ease-out .15s both">
+        <g class="fan">
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(-78 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(-52 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-3)" transform="rotate(-26 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-1)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-3)" transform="rotate(26 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(52 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(78 100 125)"/>
+        </g>
+        <path d="M90 160l-3 22m-6 0h12M110 160l3 22m-6 0h12" stroke="var(--legs)" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="100" cy="128" rx="40" ry="38" fill="var(--turkey)"/>
+        <ellipse cx="100" cy="138" rx="26" ry="24" fill="var(--turkey-2)"/>
+        <circle cx="100" cy="90" r="20" fill="var(--turkey-head)"/>
+        <circle cx="93" cy="86" r="4.5" fill="#FFFFFF"/><circle cx="107" cy="86" r="4.5" fill="#FFFFFF"/>
+        <circle cx="94" cy="87" r="2.2" fill="var(--ink)"/><circle cx="108" cy="87" r="2.2" fill="var(--ink)"/>
+        <path d="M95 94h10l-5 8z" fill="var(--beak)"/>
+        <path d="M101 99c-6 8-4 16 2 18 3-6 2-12-2-18z" fill="var(--wattle)"/>
+      </svg>
+      <h1 style="animation-delay:.45s">There's Always Room at Our Table</h1>
+      <p class="date" style="animation-delay:.6s;font-style:italic;color:var(--muted)">Good food. Great company. Grateful hearts.</p>
+      <p class="welcome" style="animation-delay:.75s;font-size:21px">We’d love for you to join us as we celebrate Thanksgiving together.<br><strong>Thursday, November 26</strong></p>
+      <p class="count" id="count" role="timer" aria-live="off" style="animation-delay:.9s"><span class="days" id="cd-days">–</span> days, <b id="cd-hours">–</b> hours, <b id="cd-mins">–</b> minutes and <b id="cd-secs">–</b> seconds to go</p>
+      <p class="jump" style="animation-delay:1.05s">
+        <a href="#rsvp">RSVP</a>
+        <a href="#food">Sign up to bring something</a>
+        <a href="#plan">Address &amp; parking</a>
+        <a href="#coming">Who's coming</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<svg class="squiggle" viewBox="0 0 400 20" width="220" height="20" aria-hidden="true"><path d="M5 10c30-12 50 12 80 0s50-12 80 0 50 12 80 0 50-12 80 0 40 10 70 0" fill="none" stroke="var(--rule)" stroke-width="3" stroke-linecap="round"/></svg>
+
+<section class="plan wrap" id="plan" aria-labelledby="plan-h">
+  <h2 class="h2" id="plan-h">Here's the plan</h2>
+  <div class="plan-grid">
+    <dl class="details">
+      <dt>When</dt>
+      <dd>Thursday, November 26. Come at 3:00, we'll eat around 4:00.</dd>
+      <dt>Where</dt>
+      <dd>Our house, 9010 Bayou Spring Ct, Missouri City, TX 77459<br><a href="https://www.google.com/maps/search/?api=1&amp;query=9010%20Bayou%20Spring%20Ct%2C%20Missouri%20City%2C%20TX%2077459" target="_blank" rel="noopener">Open in Maps</a></dd>
+      <dt>Parking</dt>
+      <dd>Park in the driveway or on the street.</dd>
+      <dt>Questions</dt>
+      <dd>Call or text Karla at <span id="phone-text">(281) 546-5257</span></dd>
+    </dl>
+    <div class="day">
+      <h3 class="label">How the day goes</h3>
+      <ol>
+        <li><span class="t">3:00</span> Appetizers and arrival</li>
+        <li><span class="t">4:00</span> We say grace and eat</li>
+        <li><span class="t">6:00</span> Dessert and coffee</li>
+        <li><span class="t">7:30</span> Leftovers get divided up</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="food" id="food" aria-labelledby="food-h">
+  <div class="wrap">
+    <div class="food-head">
+      <svg class="turkey" viewBox="0 0 200 200" role="img" aria-label="Cartoon turkey">
+        <g class="fan">
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(-78 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(-52 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-3)" transform="rotate(-26 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-1)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-3)" transform="rotate(26 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(52 100 125)"/>
+          <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(78 100 125)"/>
+        </g>
+        <path d="M90 160l-3 22m-6 0h12M110 160l3 22m-6 0h12" stroke="var(--legs)" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="100" cy="128" rx="40" ry="38" fill="var(--turkey)"/>
+        <ellipse cx="100" cy="138" rx="26" ry="24" fill="var(--turkey-2)"/>
+        <circle cx="100" cy="90" r="20" fill="var(--turkey-head)"/>
+        <circle cx="93" cy="86" r="4.5" fill="#FFFFFF"/><circle cx="107" cy="86" r="4.5" fill="#FFFFFF"/>
+        <circle cx="94" cy="87" r="2.2" fill="var(--ink)"/><circle cx="108" cy="87" r="2.2" fill="var(--ink)"/>
+        <path d="M95 94h10l-5 8z" fill="var(--beak)"/>
+        <path d="M101 99c-6 8-4 16 2 18 3-6 2-12-2-18z" fill="var(--wattle)"/>
+      </svg>
+      <div class="food-copy">
+        <h2 class="h2" id="food-h">The food</h2>
+        <p>We've got the main course covered: <strong>roast turkey and gravy, pernil and arroz con gandules</strong>.</p>
+        <p>You bring the rest! Tap <strong>I'll bring it</strong> next to a dish, or add your own when you RSVP. Claimed dishes get crossed off for everyone.</p>
+      </div>
+    </div>
+
+    <div class="sheet">
+      <div class="cols" id="cols"></div>
+
+      <p class="sheet-note" id="sheet-note">Everything here updates live as people RSVP.</p>
+    </div>
+    <p class="ps"><strong>P.S.</strong> Bring a container or two for leftovers. There's always way too much food.</p>
+  </div>
+</section>
+
+<section class="coming wrap" id="coming" aria-labelledby="coming-h">
+  <p class="kicker" style="font-family:var(--body);font-style:italic;font-size:22px;margin-bottom:6px">The guest list</p>
+  <h2 class="h2" id="coming-h">Who's coming</h2>
+  <p class="lede" id="coming-sum">No RSVPs yet. Be the first!</p>
+  <ul class="guests" id="guests"></ul>
+  <p class="regrets" id="regrets" hidden></p>
+</section>
+
+<section class="rsvp wrap" id="rsvp" aria-labelledby="rsvp-h">
+  <div class="rsvp-inner">
+    <p class="kicker" style="font-family:var(--body);font-style:italic;font-size:22px;margin-bottom:6px">One last thing</p>
+    <h2 class="h2" id="rsvp-h">Let us know you're coming</h2>
+    <p class="lede" style="margin-bottom:26px">If you can, by November 15, so we know how many chairs to find.</p>
+    <form class="form" id="rsvp-form" novalidate>
+      <div class="field"><label for="r-name">Your name (or family name)</label><input class="line" id="r-name" type="text" autocomplete="name" required></div>
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend class="legend" style="padding:0;margin-bottom:4px">Can you make it?</legend>
+        <div class="radios">
+          <label><input type="radio" name="attend" id="r-yes" value="yes" checked> We'll be there</label>
+          <label><input type="radio" name="attend" id="r-no" value="no"> Can't make it this year</label>
+        </div>
+      </fieldset>
+      <div class="pair" id="r-counts">
+        <div class="field"><label for="r-adults">How many adults?</label><input class="line" id="r-adults" type="number" min="0" max="30" value="2" inputmode="numeric"></div>
+        <div class="field"><label for="r-kids">How many kids?</label><input class="line" id="r-kids" type="number" min="0" max="30" value="0" inputmode="numeric"></div>
+      </div>
+      <div id="r-food">
+        <div class="field"><label for="r-dish">What will you bring?</label><select class="line" id="r-dish"></select></div>
+        <div class="field" id="r-custom-wrap" hidden style="margin-top:16px"><label for="r-custom">Your dish</label><input class="line" id="r-custom" type="text" maxlength="70"><p class="note" id="r-hint" style="margin-top:6px" aria-live="polite"></p></div>
+      </div>
+      <div class="field"><label for="r-diet">Any allergies or foods to avoid?</label><textarea class="line" id="r-diet" rows="2"></textarea></div>
+      <button class="btn red" type="submit" id="r-submit" style="align-self:flex-start">Send my RSVP</button>
+      <p class="status" id="r-status" role="status" aria-live="polite"></p>
+      <p class="note" style="margin:0">Your name, party size and dish show on this page for everyone. Allergies go only to Karla and Jose.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p style="font-family:var(--display);font-size:36px;line-height:1.15">See you on the 26th!</p>
+  <p style="font-family:var(--body);font-style:italic;font-size:22px;line-height:1.3;color:var(--cranberry);margin-top:6px">Karla &amp; Jose</p>
+  <div class="walker" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(-60 100 125)"/>
+      <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(-30 100 125)"/>
+      <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-1)"/>
+      <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-2)" transform="rotate(30 100 125)"/>
+      <ellipse cx="100" cy="58" rx="15" ry="50" fill="var(--leaf-4)" transform="rotate(60 100 125)"/>
+      <path d="M90 160l-3 22M110 160l3 22" stroke="var(--legs)" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <ellipse cx="100" cy="128" rx="40" ry="38" fill="var(--turkey)"/>
+      <circle cx="100" cy="90" r="20" fill="var(--turkey-head)"/>
+      <circle cx="93" cy="86" r="4.5" fill="#FFFFFF"/><circle cx="107" cy="86" r="4.5" fill="#FFFFFF"/>
+      <circle cx="94" cy="87" r="2.2" fill="var(--ink)"/><circle cx="108" cy="87" r="2.2" fill="var(--ink)"/>
+      <path d="M95 94h10l-5 8z" fill="var(--beak)"/>
+      <path d="M101 99c-6 8-4 16 2 18 3-6 2-12-2-18z" fill="var(--wattle)"/>
+    </svg>
+  </div>
+</footer>
+
+<script>
+/* ---- Things Karla will update ---- */
+var HOST_PHONE = "2815465257";                         // digits only, e.g. "7135551234"; leave "" until known
+var DINNER_START = "2026-11-26T15:00:00-06:00"; // arrival time the countdown counts to
+/* Sign-up sheet. Add `by: "Name"` to a line once someone claims it. */
+var SHEET = {
+  Desserts: [{dish:"Pumpkin pie"},{dish:"Pecan pie"},{dish:"Flan"},{dish:"Tres leches"},{dish:"Cookies"}],
+  Sides:    [{dish:"Mashed potatoes"},{dish:"Mac and cheese"},{dish:"Green bean casserole"},{dish:"Dinner rolls"},{dish:"Stuffing"},{dish:"Salad"}],
+  Drinks:   [{dish:"Sweet tea"},{dish:"Sparkling cider"},{dish:"Sodas"},{dish:"Ice"}]
+};
+var CATEGORY_OF = {Desserts:"Dessert", Sides:"Side", Drinks:"Drink"};
+
+/* countdown */
+(function(){
+  var target = new Date(DINNER_START).getTime();
+  var d = document.getElementById("cd-days"), h = document.getElementById("cd-hours"),
+      m = document.getElementById("cd-mins"), s = document.getElementById("cd-secs");
+  function tick(){
+    var left = Math.max(0, Math.floor((target - Date.now()) / 1000));
+    d.textContent = Math.floor(left / 86400);
+    h.textContent = Math.floor(left % 86400 / 3600);
+    m.textContent = Math.floor(left % 3600 / 60);
+    s.textContent = left % 60;
+    if (left === 0) document.getElementById("count").textContent = "It's Thanksgiving! See you soon.";
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+if (HOST_PHONE) document.getElementById("phone-text").textContent = HOST_PHONE.replace(/^(\d{3})(\d{3})(\d{4})$/, "($1) $2-$3");
+
+/* ---- Live data: paste the Google Apps Script web app URL here ---- */
+var API_URL = "https://script.google.com/macros/s/AKfycbwmTR-fCeXKINsgkcnSDbM2UWEZS_RNfV81L8zQtNbUCPlTK_c1gh2HgddC_IxEqedm/exec";   // leave "" for preview mode (sample RSVPs, nothing saved)
+var preview = !API_URL;
+var SAMPLE = [
+  {name:"Sample Guest", attending:"yes", adults:2, kids:1, category:"desserts", dish:"Flan", sample:true},
+  {name:"Sample Family", attending:"yes", adults:2, kids:0, category:"sides", dish:"Mac and cheese", sample:true}
+];
+var entries = preview ? SAMPLE.slice() : [];
+var OTHER = "__other", NONE = "__none";
+function $(id){ return document.getElementById(id); }
+function norm(s){ return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
+function catKey(cat){ return cat.toLowerCase(); }
+function claims(){
+  var m = {};
+  entries.forEach(function(e){ if (e.attending === "yes" && e.dish){ var k = norm(e.dish); if (!m[k]) m[k] = e; } });
+  return m;
+}
+function tag(el, e){ if (e.sample){ var t = document.createElement("span"); t.className = "tag"; t.textContent = "sample"; el.appendChild(t); } }
+
+/* sign-up sheet */
+function renderSheet(){
+  var cols = $("cols"), taken = claims(), onSheet = {};
+  cols.textContent = "";
+  Object.keys(SHEET).forEach(function(cat){ SHEET[cat].forEach(function(i){ onSheet[norm(i.dish)] = true; }); });
+  var cats = Object.keys(SHEET).slice();
+  var extras = entries.filter(function(e){ return e.attending === "yes" && e.dish && !onSheet[norm(e.dish)]; });
+  cats.forEach(function(cat){
+    var col = document.createElement("div");
+    var h = document.createElement("h3"); h.textContent = cat; col.appendChild(h);
+    var ul = document.createElement("ul");
+    var items = SHEET[cat].map(function(i){ return {dish: i.dish}; });
+    extras.filter(function(e){ return e.category === catKey(cat); }).forEach(function(e){ items.push({dish: e.dish}); });
+    items.forEach(function(item){
+      var li = document.createElement("li");
+      var dish = document.createElement("span"); dish.className = "dish"; dish.textContent = item.dish; li.appendChild(dish);
+      var e = taken[norm(item.dish)];
+      if (e){
+        li.className = "taken";
+        var who = document.createElement("span"); who.className = "who"; who.textContent = e.name; tag(who, e); li.appendChild(who);
+      } else {
+        var b = document.createElement("button"); b.type = "button"; b.className = "claim"; b.textContent = "I'll bring it";
+        b.setAttribute("aria-label", "I'll bring " + item.dish);
+        b.addEventListener("click", function(){ claimDish(catKey(cat), item.dish); });
+        li.appendChild(b);
+      }
+      ul.appendChild(li);
+    });
+    col.appendChild(ul); cols.appendChild(col);
+  });
+  var other = extras.filter(function(e){ return SHEET_KEYS.indexOf(e.category) === -1; });
+  if (other.length){
+    var col = document.createElement("div");
+    var h = document.createElement("h3"); h.textContent = "Also coming"; col.appendChild(h);
+    var ul = document.createElement("ul");
+    other.forEach(function(e){
+      var li = document.createElement("li"); li.className = "taken";
+      var d = document.createElement("span"); d.className = "dish"; d.textContent = e.dish;
+      var w = document.createElement("span"); w.className = "who"; w.textContent = e.name; tag(w, e);
+      li.append(d, w); ul.appendChild(li);
+    });
+    col.appendChild(ul); cols.appendChild(col);
+  }
+}
+var SHEET_KEYS = Object.keys(SHEET).map(catKey);
+
+/* who's coming */
+function renderGuests(){
+  var list = $("guests"), yes = entries.filter(function(e){ return e.attending === "yes"; }), no = entries.filter(function(e){ return e.attending === "no"; });
+  list.textContent = "";
+  var people = 0;
+  yes.forEach(function(e){
+    var a = Number(e.adults) || 0, k = Number(e.kids) || 0; people += a + k;
+    var li = document.createElement("li");
+    var n = document.createElement("span"); n.className = "gname"; n.textContent = e.name; tag(n, e);
+    var m = document.createElement("span"); m.className = "gmeta";
+    var party = (a + k) + (a + k === 1 ? " person" : " people") + (k ? " (" + k + (k === 1 ? " kid" : " kids") + ")" : "");
+    m.textContent = party + (e.dish ? " · bringing " : "");
+    if (e.dish){ var b = document.createElement("b"); b.textContent = e.dish; m.appendChild(b); }
+    li.append(n, m); list.appendChild(li);
+  });
+  $("coming-sum").textContent = yes.length
+    ? people + (people === 1 ? " person" : " people") + " coming so far, from " + yes.length + (yes.length === 1 ? " RSVP." : " RSVPs.")
+    : "No RSVPs yet. Be the first!";
+  $("regrets").hidden = !no.length;
+  $("regrets").textContent = no.length ? "Missing " + no.map(function(e){ return e.name; }).join(", ") + " this year. We'll save you a plate in spirit." : "";
+}
+
+/* dish picker in the RSVP form */
+function renderPicker(){
+  var sel = $("r-dish"), prev = sel.value, taken = claims();
+  sel.textContent = "";
+  Object.keys(SHEET).forEach(function(cat){
+    var g = document.createElement("optgroup"); g.label = cat;
+    SHEET[cat].forEach(function(i){
+      if (taken[norm(i.dish)]) return;
+      var o = document.createElement("option"); o.value = catKey(cat) + "|" + i.dish; o.textContent = i.dish; g.appendChild(o);
+    });
+    if (g.children.length) sel.appendChild(g);
+  });
+  var g2 = document.createElement("optgroup"); g2.label = "Or";
+  [[OTHER, "Something else (I'll type it)"], [NONE, "Not bringing a dish this time"]].forEach(function(x){ var o = document.createElement("option"); o.value = x[0]; o.textContent = x[1]; g2.appendChild(o); });
+  sel.appendChild(g2);
+  var ok = Array.prototype.some.call(sel.options, function(o){ return o.value === prev; });
+  sel.value = ok ? prev : sel.options[0].value;
+  syncPicker();
+}
+function syncPicker(){ $("r-custom-wrap").hidden = $("r-dish").value !== OTHER; checkDup(); }
+function checkDup(){
+  var hint = $("r-hint"); hint.textContent = "";
+  if ($("r-dish").value !== OTHER) return;
+  var v = norm($("r-custom").value); if (v.length < 3) return;
+  var t = claims();
+  Object.keys(t).some(function(k){ if (k.indexOf(v) > -1 || v.indexOf(k) > -1){ hint.textContent = "Heads up: " + t[k].name + " is already bringing " + t[k].dish + "."; return true; } return false; });
+}
+function claimDish(cat, dish){
+  $("r-yes").checked = true; syncAttend();
+  $("r-dish").value = cat + "|" + dish; syncPicker();
+  $("rsvp").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+  setTimeout(function(){ $("r-name").focus({preventScroll: true}); }, 400);
+}
+function syncAttend(){
+  var yes = $("r-yes").checked;
+  $("r-counts").hidden = !yes; $("r-food").hidden = !yes;
+  $("r-submit").textContent = yes ? "Send my RSVP" : "Send my regrets";
+}
+function renderAll(){ renderSheet(); renderGuests(); renderPicker(); }
+
+function load(){
+  if (preview){ renderAll(); return; }
+  fetch(API_URL, {cache: "no-store"}).then(function(r){ return r.json(); }).then(function(d){
+    entries = Array.isArray(d.entries) ? d.entries : []; renderAll();
+  }).catch(function(){
+    var st = $("r-status"); st.className = "status err"; st.textContent = "The guest list didn't load. Refresh the page to try again."; renderAll();
+  });
+}
+
+$("rsvp-form").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var st = $("r-status"); st.className = "status"; st.textContent = "";
+  var yes = $("r-yes").checked, pick = $("r-dish").value, cat = "", dish = "";
+  if (yes && pick === OTHER){ cat = "other"; dish = $("r-custom").value.trim(); }
+  else if (yes && pick !== NONE){ var i = pick.indexOf("|"); cat = pick.slice(0, i); dish = pick.slice(i + 1); }
+  var entry = {
+    name: $("r-name").value.trim(), attending: yes ? "yes" : "no",
+    adults: yes ? Math.max(0, parseInt($("r-adults").value, 10) || 0) : 0,
+    kids: yes ? Math.max(0, parseInt($("r-kids").value, 10) || 0) : 0,
+    category: cat, dish: dish, allergies: yes ? $("r-diet").value.trim() : ""
+  };
+  if (!entry.name){ st.className = "status err"; st.textContent = "Add your name so Karla knows who's replying."; $("r-name").focus(); return; }
+  if (yes && entry.adults + entry.kids < 1){ st.className = "status err"; st.textContent = "Add how many people are coming."; $("r-adults").focus(); return; }
+  if (yes && pick === OTHER && !dish){ st.className = "status err"; st.textContent = "Type the dish you're bringing, or pick one from the list."; $("r-custom").focus(); return; }
+  var btn = $("r-submit"); btn.disabled = true; btn.textContent = "Sending…";
+  var done = function(){
+    var who = entry.name;
+    st.className = "status ok";
+    st.textContent = yes ? "You're on the list, " + who + "!" + (dish ? " " + dish + " is on the table." : "") + (preview ? " (Preview only, not saved.)" : "")
+                         : "Thanks for letting us know, " + who + ". We'll miss you!";
+    $("rsvp-form").reset(); syncAttend(); renderAll();
+    btn.disabled = false; syncAttend();
+  };
+  var fail = function(msg){ st.className = "status err"; st.textContent = msg || "Your RSVP didn't go through. Check your connection and try again."; btn.disabled = false; syncAttend(); };
+  if (preview){
+    if (dish && claims()[norm(dish)]) return fail(dish + " was just claimed. Pick another dish.");
+    entries.push(entry); return done();
+  }
+  fetch(API_URL, {method: "POST", headers: {"Content-Type": "text/plain;charset=utf-8"}, body: JSON.stringify(entry)})
+    .then(function(r){ return r.json(); })
+    .then(function(res){ if (Array.isArray(res.entries)) entries = res.entries; if (!res.ok){ renderAll(); fail(res.error); } else done(); })
+    .catch(function(){ fail(); });
+});
+$("r-dish").addEventListener("change", syncPicker);
+$("r-custom").addEventListener("input", checkDup);
+$("r-yes").addEventListener("change", syncAttend);
+$("r-no").addEventListener("change", syncAttend);
+$("preview-note").hidden = !preview;
+syncAttend(); load();
+if (!preview) setInterval(function(){ if (document.visibilityState === "visible") load(); }, 30000);
+</script>
+
+</body></html>
