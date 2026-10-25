@@ -466,6 +466,7 @@ function renderAll(){ renderSheet(); renderGuests(); renderPicker(); }
 
 function load(){
   if (preview){ renderAll(); return; }
+  if (!document.querySelector('#cols h3')) renderAll();  /* show the dish list right away while RSVPs load */
   fetch(API_URL, {cache: "no-store"}).then(function(r){ return r.json(); }).then(function(d){
     entries = Array.isArray(d.entries) ? d.entries : []; renderAll();
   }).catch(function(){
