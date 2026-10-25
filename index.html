@@ -71,6 +71,8 @@ h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,6.5v
 .fan{transform-origin:100px 125px;transform-box:view-box;animation:fan 3.2s ease-in-out infinite}
 .food-copy{flex:1 1 360px;min-width:0}
 .food-copy p{margin:0 0 10px}
+.hosting{margin:0 0 14px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.hosting li{background:var(--sheet);border:1px solid var(--rule);padding:6px 14px;font-weight:600}
 .sheet{background:var(--sheet);border:1px solid #E2D6C2;border-left:3px double var(--margin);padding:28px 24px 28px 36px;box-shadow:0 1px 3px rgba(46,33,27,.08)}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
 .cols h3{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:24px}
@@ -234,7 +236,13 @@ footer p{margin:0}
       </svg>
       <div class="food-copy">
         <h2 class="h2" id="food-h">The food</h2>
-        <p>We've got the main course covered: <strong>roast turkey and gravy, pernil and arroz con gandules</strong>.</p>
+        <p>We've got the main course covered. <strong>From Jose's kitchen:</strong></p>
+        <ul class="hosting">
+          <li>Turkey</li>
+          <li>Stuffing</li>
+          <li>Puerto Rican potato salad</li>
+          <li>Puerto Rican rice</li>
+        </ul>
         <p>You bring the rest! Tap <strong>I'll bring it</strong> next to a dish, or add your own when you RSVP. Claimed dishes get crossed off for everyone.</p>
       </div>
     </div>
@@ -314,7 +322,7 @@ var DINNER_START = "2026-11-26T15:00:00-06:00"; // arrival time the countdown co
 /* Sign-up sheet. Add `by: "Name"` to a line once someone claims it. */
 var SHEET = {
   Desserts: [{dish:"Pumpkin pie"},{dish:"Pecan pie"},{dish:"Flan"},{dish:"Tres leches"},{dish:"Cookies"}],
-  Sides:    [{dish:"Mashed potatoes"},{dish:"Mac and cheese"},{dish:"Green bean casserole"},{dish:"Dinner rolls"},{dish:"Stuffing"},{dish:"Salad"}],
+  Sides:    [{dish:"Mashed potatoes"},{dish:"Mac and cheese"},{dish:"Green bean casserole"},{dish:"Dinner rolls"},{dish:"Salad"}],
   Drinks:   [{dish:"Sweet tea"},{dish:"Sparkling cider"},{dish:"Sodas"},{dish:"Ice"}]
 };
 var CATEGORY_OF = {Desserts:"Dessert", Sides:"Side", Drinks:"Drink"};
