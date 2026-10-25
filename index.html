@@ -389,7 +389,7 @@ function renderSheet(){
   var other = extras.filter(function(e){ return SHEET_KEYS.indexOf(e.category) === -1; });
   if (other.length){
     var col = document.createElement("div");
-    var h = document.createElement("h3"); h.textContent = "Also coming"; col.appendChild(h);
+    var h = document.createElement("h3"); h.textContent = "Additional dishes"; col.appendChild(h);
     var ul = document.createElement("ul");
     other.forEach(function(e){
       var li = document.createElement("li"); li.className = "taken";
