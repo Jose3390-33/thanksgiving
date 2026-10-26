@@ -55,15 +55,26 @@ h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,6.5v
 /* plan */
 .plan{padding-block:56px 80px}
 .plan-grid{display:flex;flex-wrap:wrap;gap:48px;margin-top:24px}
-.details{flex:1 1 380px;min-width:0;margin:0;display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);column-gap:20px}
-.details dt,.details dd{padding:14px 0;border-top:1px solid var(--rule)}
-.details dt{font-weight:600}
-.details dd{margin:0}
-.details dt:last-of-type,.details dd:last-of-type{border-bottom:1px solid var(--rule)}
+.facts{flex:1 1 400px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tile{background:var(--sheet);border:1px solid var(--rule);padding:20px 22px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.tile .k{margin:0;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--cranberry);font-weight:600}
+.tile .v{margin:0;font-family:var(--display);font-size:22px;line-height:1.25;overflow-wrap:anywhere}
+.tile .s{margin:0;font-size:16px;color:var(--muted)}
+.tile a{font-size:16px;font-weight:600;margin-top:auto;padding-top:6px}
+.questions{margin:16px 0 0;font-size:17px;color:var(--muted)}
+.questions b{color:var(--ink);font-weight:600}
 .day{flex:1 1 300px;min-width:0}
-.label{margin:0 0 14px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:var(--body);font-weight:600}
-.day ol{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px dashed var(--rule);display:flex;flex-direction:column;gap:12px}
-.day time,.day .t{font-weight:600;color:var(--cranberry);font-variant-numeric:lining-nums tabular-nums}
+.label{margin:0 0 18px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:var(--body);font-weight:600}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl li{position:relative;padding:0 0 26px 40px}
+.tl li:last-child{padding-bottom:0}
+.tl li:not(:last-child)::after{content:"";position:absolute;left:9px;top:24px;bottom:-4px;width:2px;background:var(--rule)}
+.tl li::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--paper);border:3px solid var(--cranberry);box-sizing:border-box}
+.tl li:first-child::before{background:var(--cranberry)}
+.tl .t{display:block;font-family:var(--display);font-size:24px;line-height:1.1;color:var(--cranberry);font-variant-numeric:lining-nums tabular-nums}
+.tl .e{display:block;margin-top:4px;font-size:18px}
+@media (max-width:420px){.tile{padding:16px}.tile .v{font-size:19px}}
 
 /* food */
 .food{background:var(--band);padding-block:80px}
@@ -192,23 +203,21 @@ footer p{margin:0}
   <p class="kicker" style="font-family:var(--body);font-style:italic;font-size:22px;margin-bottom:6px">The details</p>
   <h2 class="h2" id="plan-h">Here's the plan</h2>
   <div class="plan-grid">
-    <dl class="details">
-      <dt>When</dt>
-      <dd>Thursday, November 26. Come at 3:00, we'll eat around 4:00.</dd>
-      <dt>Where</dt>
-      <dd>Our house, 9010 Bayou Spring Ct, Missouri City, TX 77459<br><a href="https://www.google.com/maps/search/?api=1&amp;query=9010%20Bayou%20Spring%20Ct%2C%20Missouri%20City%2C%20TX%2077459" target="_blank" rel="noopener">Open in Maps</a></dd>
-      <dt>Parking</dt>
-      <dd>Park in the driveway or on the street.</dd>
-      <dt>Questions</dt>
-      <dd>Call or text Karla at <span id="phone-text">(281) 546-5257</span></dd>
-    </dl>
+    <div class="facts">
+      <div class="tiles">
+        <div class="tile"><p class="k">Date</p><p class="v">Thursday, November 26</p></div>
+        <div class="tile"><p class="k">Time</p><p class="v">3:00 PM</p><p class="s">Arrive at 3, dinner around 4</p></div>
+        <div class="tile"><p class="k">Location</p><p class="v">9010 Bayou Spring Ct</p><p class="s">Missouri City, TX 77459</p><a href="https://www.google.com/maps/search/?api=1&amp;query=9010%20Bayou%20Spring%20Ct%2C%20Missouri%20City%2C%20TX%2077459" target="_blank" rel="noopener">Open in Maps</a></div>
+        <div class="tile"><p class="k">Parking</p><p class="v">Driveway or street</p></div>
+      </div>
+      <p class="questions"><b>Questions?</b> Call or text Karla at <span id="phone-text">(281) 546-5257</span></p>
+    </div>
     <div class="day">
       <h3 class="label">How the day goes</h3>
-      <ol>
-        <li><span class="t">3:00</span> Appetizers and arrival</li>
-        <li><span class="t">4:00</span> We say grace and eat</li>
-        <li><span class="t">6:00</span> Dessert and coffee</li>
-        <li><span class="t">7:30</span> Leftovers get divided up</li>
+      <ol class="tl">
+        <li><span class="t">3:00 PM</span><span class="e">Appetizers and arrival</span></li>
+        <li><span class="t">4:00 PM</span><span class="e">We say grace and eat</span></li>
+        <li><span class="t">6:00 PM</span><span class="e">Dessert and coffee</span></li>
       </ol>
     </div>
   </div>
