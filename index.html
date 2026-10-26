@@ -83,18 +83,46 @@ h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,6.5v
 .fan{transform-origin:100px 125px;transform-box:view-box;animation:fan 3.2s ease-in-out infinite}
 .food-copy{flex:1 1 360px;min-width:0}
 .food-copy p{margin:0 0 10px}
-.hosting{margin:0 0 14px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.hosting li{background:var(--sheet);border:1px solid var(--rule);padding:6px 14px;font-weight:600}
 .sheet{background:var(--sheet);border:1px solid #E2D6C2;border-left:3px double var(--margin);padding:28px 24px 28px 36px;box-shadow:0 1px 3px rgba(46,33,27,.08)}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
-.cols h3{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:24px}
+.cols h3{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:22px;padding-bottom:8px;border-bottom:2px solid var(--rule)}
 .cols ul{list-style:none;margin:0;padding:0}
-.cols li{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;border-bottom:1px solid var(--rule)}
-.cols li.taken .dish{text-decoration:line-through;text-decoration-color:var(--cranberry);color:var(--muted)}
-.cols li .who{font-family:var(--body);font-style:italic;font-size:17px;line-height:1.3;color:var(--muted)}
-.claim{background:none;border:0;padding:8px 0;color:var(--cranberry);font-weight:600;font-size:16px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.cols li{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;min-height:52px;border-bottom:1px solid var(--rule)}
+
+
+.food-intro{font-size:19px;max-width:52ch}
+.sub-h{margin:0 0 14px;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.2}
+.kitchen{background:var(--sheet);border:1px solid var(--rule);padding:24px 28px;margin:0 0 44px}
+.kitchen-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kitchen-list li{display:flex;align-items:baseline;gap:10px;font-size:18px;min-width:0}
+.kitchen-list li::before{content:"";flex:0 0 auto;width:7px;height:12px;border:solid var(--leaf-4);border-width:0 2px 2px 0;transform:rotate(40deg) translateY(-2px)}
+.share-intro{margin:-6px 0 18px;font-size:18px}
+.how{border-left:3px solid var(--leaf-2);padding:2px 0 2px 16px;margin:0 0 22px;max-width:60ch}
+.how p{margin:0;font-size:16px;color:var(--muted)}
+.how .how-k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink);margin-bottom:2px}
+.cols li.taken{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;padding:8px 0}
+.cols li.taken .dish{color:var(--muted)}
+.status{display:block;font-size:15px;font-style:italic;color:var(--muted);min-width:0;overflow-wrap:anywhere}
+.status::before{content:"";display:inline-block;width:5px;height:10px;margin:0 9px 0 2px;border:solid var(--leaf-4);border-width:0 2px 2px 0;transform:rotate(40deg) translateY(-2px)}
+.status b{font-weight:600;font-style:normal;color:var(--ink);overflow-wrap:anywhere}
+.claim{flex:0 0 auto;background:transparent;border:1px solid var(--cranberry);border-radius:999px;padding:0 14px;min-height:36px;color:var(--cranberry);font-weight:600;font-size:15px;cursor:pointer;transition:background .15s,color .15s}
+.claim:hover{background:var(--cranberry);color:#FFFFFF}
+.own{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:26px;padding-top:20px;border-top:1px solid var(--rule)}
+.own span{font-size:16px;color:var(--muted)}
+.own-btn{background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:0 18px;min-height:44px;font-weight:600;font-size:16px;cursor:pointer}
+.own-btn:hover{filter:brightness(1.2)}
+.leftovers{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-size:16px;color:var(--muted)}
+.leftovers svg{width:22px;height:22px;flex:0 0 auto;color:var(--turkey)}
+.picked{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0 0 6px;padding:10px 14px;background:var(--sheet);border:1px solid var(--leaf-2);border-radius:4px;font-size:17px}
+.picked b{font-weight:600}
+.picked button{background:none;border:0;padding:4px 0;color:var(--cranberry);font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(232,163,61,.7)}100%{box-shadow:0 0 0 14px rgba(232,163,61,0)}}
+.glow{animation:glow 1.2s ease-out 2}
+@media (max-width:560px){
+  .kitchen{padding:20px}
+  .kitchen-list{grid-template-columns:1fr}
+}
 .claim:hover{color:var(--cranberry-dark)}
-.ps{margin:22px 0 0}
 
 /* forms */
 .form{display:flex;flex-wrap:wrap;gap:16px 18px;align-items:flex-end}
@@ -116,8 +144,7 @@ textarea.line{padding:6px 2px;resize:vertical}
 
 .rsvp{background:var(--band);padding-block:80px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .sheet-note{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted);font-size:16px}
-.cols li .who{white-space:nowrap}
-.cols li.taken .who .tag,.guests .tag{font-family:var(--body);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
+.status .tag,.guests .tag{font-family:var(--body);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
 .coming{padding-block:80px}
 .guests{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
 .guests li{background:var(--sheet);border:1px solid var(--rule);padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0}
@@ -247,25 +274,38 @@ footer p{margin:0}
       </svg>
       <div class="food-copy">
         <p class="kicker" style="font-family:var(--body);font-style:italic;font-size:22px;margin-bottom:6px">On the menu</p>
-        <h2 class="h2" id="food-h">The food</h2>
-        <p>We've got the main course covered. <strong>From Jose's kitchen:</strong></p>
-        <ul class="hosting">
-          <li>Turkey</li>
-          <li>Gravy</li>
-          <li>Stuffing</li>
-          <li>Puerto Rican potato salad</li>
-          <li>Puerto Rican rice</li>
-        </ul>
-        <p>You bring the rest! Tap <strong>I'll bring it</strong> next to a dish, or add your own when you RSVP. Claimed dishes get crossed off for everyone.</p>
+        <h2 class="h2" id="food-h">The Food</h2>
+        <p class="food-intro">We're taking care of the main dishes! Bring a favorite to share and help us make the table even fuller.</p>
       </div>
     </div>
 
-    <div class="sheet">
-      <div class="cols" id="cols"></div>
-
-      <p class="sheet-note" id="sheet-note"><strong>Bringing something not on the list?</strong> When you <a href="#rsvp">RSVP</a>, choose <strong>"Something else (I'll type it)"</strong> under "What will you bring?" type your dish, and pick which list it goes on (Sides, Desserts or Drinks). It will show up here for everyone.<br><span style="font-size:15px">This list updates live as people RSVP.</span></p>
+    <div class="kitchen" aria-labelledby="kitchen-h">
+      <h3 class="sub-h" id="kitchen-h">From Our Kitchen</h3>
+      <ul class="kitchen-list">
+        <li>Turkey</li>
+        <li>Gravy</li>
+        <li>Stuffing</li>
+        <li>Puerto Rican potato salad</li>
+        <li>Puerto Rican rice</li>
+      </ul>
     </div>
-    <p class="ps"><strong>P.S.</strong> Bring a container or two for leftovers. There's always way too much food.</p>
+
+    <div class="share" aria-labelledby="share-h">
+      <h3 class="sub-h" id="share-h">Bring Something to Share</h3>
+      <p class="share-intro">Choose an available dish or bring your own specialty.</p>
+      <div class="how">
+        <p class="how-k">How it works</p>
+        <p>Choose what you'll bring when you RSVP. Once a dish is claimed, everyone can see who's bringing it.</p>
+      </div>
+      <div class="sheet">
+        <div class="cols" id="cols"></div>
+        <div class="own">
+          <button type="button" class="own-btn" id="own-btn">I'm Bringing Something Else</button>
+          <span>Not on the list? Add your own dish.</span>
+        </div>
+      </div>
+      <p class="leftovers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16l-1.5 9a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 10h18M9 6.5c0-1 .8-1.5 1.5-1.5h3c.7 0 1.5.5 1.5 1.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Bring a container for leftovers&mdash;we always make plenty!</p>
+    </div>
   </div>
 </section>
 
@@ -296,8 +336,8 @@ footer p{margin:0}
         <div class="field"><label for="r-kids">How many kids?</label><input class="line" id="r-kids" type="number" min="0" max="30" value="0" inputmode="numeric"></div>
       </div>
       <div id="r-food">
-        <div class="field"><label for="r-dish">What will you bring?</label><select class="line" id="r-dish"></select></div>
-        <div id="r-custom-wrap" hidden style="margin-top:16px;display:grid;gap:16px"><div class="field"><label for="r-custom">Your dish</label><input class="line" id="r-custom" type="text" maxlength="70"><p class="note" id="r-hint" style="margin-top:6px" aria-live="polite"></p></div><div class="field"><label for="r-cat">Which list does it go on?</label><select class="line" id="r-cat"><option value="sides">Sides</option><option value="desserts">Desserts</option><option value="drinks">Drinks</option><option value="other">Something else (plates, ice, extras)</option></select></div></div>
+        <div class="field"><label for="r-dish">What will you bring?</label><p class="picked" id="r-picked" hidden aria-live="polite"></p><select class="line" id="r-dish"></select></div>
+        <div id="r-custom-wrap" hidden style="margin-top:16px;display:grid;gap:16px"><div class="field"><label for="r-custom">Your dish</label><input class="line" id="r-custom" type="text" maxlength="70"><p class="note" id="r-hint" style="margin-top:6px" aria-live="polite"></p></div><div class="field"><label for="r-cat">Which list does it go on?</label><select class="line" id="r-cat"><option value="sides">Sides</option><option value="desserts">Desserts</option><option value="drinks">Drinks</option><option value="other">Something Else (plates, ice, extras)</option></select></div></div>
       </div>
       <div class="field"><label for="r-diet">Any allergies or foods to avoid?</label><textarea class="line" id="r-diet" rows="2"></textarea></div>
       <button class="btn red" type="submit" id="r-submit" style="align-self:flex-start">Send my RSVP</button>
@@ -396,10 +436,10 @@ function renderSheet(){
       var dish = document.createElement("span"); dish.className = "dish"; dish.textContent = item.dish; li.appendChild(dish);
       var e = taken[norm(item.dish)];
       if (e){
-        li.className = item.extra ? "extra" : "taken";
-        var who = document.createElement("span"); who.className = "who"; who.textContent = e.name; tag(who, e); li.appendChild(who);
+        li.className = "taken";
+        li.appendChild(statusEl(e));
       } else {
-        var b = document.createElement("button"); b.type = "button"; b.className = "claim"; b.textContent = "I'll bring it";
+        var b = document.createElement("button"); b.type = "button"; b.className = "claim"; b.textContent = "I'll Bring It";
         b.setAttribute("aria-label", "I'll bring " + item.dish);
         b.addEventListener("click", function(){ claimDish(catKey(cat), item.dish); });
         li.appendChild(b);
@@ -411,18 +451,23 @@ function renderSheet(){
   var other = extras.filter(function(e){ return SHEET_KEYS.indexOf(e.category) === -1; });
   if (other.length){
     var col = document.createElement("div");
-    var h = document.createElement("h3"); h.textContent = "Additional dishes"; col.appendChild(h);
+    var h = document.createElement("h3"); h.textContent = "Something Else"; col.appendChild(h);
     var ul = document.createElement("ul");
     other.forEach(function(e){
-      var li = document.createElement("li"); li.className = "extra";
+      var li = document.createElement("li"); li.className = "taken";
       var d = document.createElement("span"); d.className = "dish"; d.textContent = e.dish;
-      var w = document.createElement("span"); w.className = "who"; w.textContent = e.name; tag(w, e);
-      li.append(d, w); ul.appendChild(li);
+      li.append(d, statusEl(e)); ul.appendChild(li);
     });
     col.appendChild(ul); cols.appendChild(col);
   }
 }
 var SHEET_KEYS = Object.keys(SHEET).map(catKey);
+function statusEl(e){
+  var s = document.createElement("span"); s.className = "status";
+  s.appendChild(document.createTextNode("Claimed by "));
+  var b = document.createElement("b"); b.textContent = e.name; s.appendChild(b); tag(s, e);
+  return s;
+}
 
 /* who's coming */
 function renderGuests(){
@@ -457,13 +502,25 @@ function renderPicker(){
     if (g.children.length) sel.appendChild(g);
   });
   var g2 = document.createElement("optgroup"); g2.label = "Or";
-  [[OTHER, "Something else (I'll type it)"], [NONE, "Not bringing a dish this time"]].forEach(function(x){ var o = document.createElement("option"); o.value = x[0]; o.textContent = x[1]; g2.appendChild(o); });
+  [[OTHER, "I'm bringing something else (I'll type it)"], [NONE, "Not bringing a dish this time"]].forEach(function(x){ var o = document.createElement("option"); o.value = x[0]; o.textContent = x[1]; g2.appendChild(o); });
   sel.appendChild(g2);
   var ok = Array.prototype.some.call(sel.options, function(o){ return o.value === prev; });
   sel.value = ok ? prev : sel.options[0].value;
   syncPicker();
 }
-function syncPicker(){ $("r-custom-wrap").hidden = $("r-dish").value !== OTHER; checkDup(); }
+function syncPicker(){
+  var v = $("r-dish").value, pk = $("r-picked");
+  $("r-custom-wrap").hidden = v !== OTHER;
+  if (v && v !== OTHER && v !== NONE){
+    pk.textContent = "";
+    pk.appendChild(document.createTextNode("\u2713 You're bringing "));
+    var b = document.createElement("b"); b.textContent = v.slice(v.indexOf("|") + 1); pk.appendChild(b);
+    var c = document.createElement("button"); c.type = "button"; c.textContent = "Change";
+    c.addEventListener("click", function(){ $("r-dish").focus(); });
+    pk.appendChild(c); pk.hidden = false;
+  } else { pk.hidden = true; }
+  checkDup();
+}
 function checkDup(){
   var hint = $("r-hint"); hint.textContent = "";
   if ($("r-dish").value !== OTHER) return;
@@ -471,11 +528,23 @@ function checkDup(){
   var t = claims();
   Object.keys(t).some(function(k){ if (k.indexOf(v) > -1 || v.indexOf(k) > -1){ hint.textContent = "Heads up: " + t[k].name + " is already bringing " + t[k].dish + "."; return true; } return false; });
 }
+function goToRsvp(then){
+  var smooth = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  $("r-food").scrollIntoView({behavior: smooth ? "smooth" : "auto", block: "center"});
+  setTimeout(then, smooth ? 600 : 0);
+}
 function claimDish(cat, dish){
   $("r-yes").checked = true; syncAttend();
   $("r-dish").value = cat + "|" + dish; syncPicker();
-  $("rsvp").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
-  setTimeout(function(){ $("r-name").focus({preventScroll: true}); }, 400);
+  goToRsvp(function(){
+    var pk = $("r-picked"); pk.classList.remove("glow"); void pk.offsetWidth; pk.classList.add("glow");
+    ($("r-name").value ? $("r-submit") : $("r-name")).focus({preventScroll: true});
+  });
+}
+function bringOwn(){
+  $("r-yes").checked = true; syncAttend();
+  $("r-dish").value = OTHER; syncPicker();
+  goToRsvp(function(){ $("r-custom").focus({preventScroll: true}); });
 }
 function syncAttend(){
   var yes = $("r-yes").checked;
@@ -529,6 +598,7 @@ $("rsvp-form").addEventListener("submit", function(ev){
     .catch(function(){ fail(); });
 });
 $("r-dish").addEventListener("change", syncPicker);
+$("own-btn").addEventListener("click", bringOwn);
 $("r-custom").addEventListener("input", checkDup);
 $("r-yes").addEventListener("change", syncAttend);
 $("r-no").addEventListener("change", syncAttend);
