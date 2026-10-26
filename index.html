@@ -265,7 +265,6 @@ footer p{margin:0}
   <h2 class="h2" id="coming-h">Who's coming</h2>
   <p class="lede" id="coming-sum">No RSVPs yet. Be the first!</p>
   <ul class="guests" id="guests"></ul>
-  <p class="regrets" id="regrets" hidden></p>
 </section>
 
 <section class="rsvp" id="rsvp" aria-labelledby="rsvp-h">
@@ -294,7 +293,7 @@ footer p{margin:0}
       <div class="field"><label for="r-diet">Any allergies or foods to avoid?</label><textarea class="line" id="r-diet" rows="2"></textarea></div>
       <button class="btn red" type="submit" id="r-submit" style="align-self:flex-start">Send my RSVP</button>
       <p class="status" id="r-status" role="status" aria-live="polite"></p>
-      <p class="note" style="margin:0">Your name, party size and dish show on this page for everyone. Allergies go only to Karla and Jose.</p>
+      <p class="note" style="margin:0">If you're coming, your name, party size and dish show on this page for everyone. If you can't make it, only Karla and Jose will see that. Allergies go only to them too.</p>
     </form>
   </div>
  </div>
@@ -434,8 +433,6 @@ function renderGuests(){
   $("coming-sum").textContent = yes.length
     ? people + (people === 1 ? " person" : " people") + " coming so far, from " + yes.length + (yes.length === 1 ? " RSVP." : " RSVPs.")
     : "No RSVPs yet. Be the first!";
-  $("regrets").hidden = !no.length;
-  $("regrets").textContent = no.length ? "Missing " + no.map(function(e){ return e.name; }).join(", ") + " this year. We'll save you a plate in spirit." : "";
 }
 
 /* dish picker in the RSVP form */
